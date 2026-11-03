@@ -1,0 +1,19 @@
+# Python / Virtual Environment
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables (security sensitive)
+.env
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+
+# IDE & OS configuration files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

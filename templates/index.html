@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}Nimbus Weather Dashboard{% endblock %}
+
+{% block content %}
+<!-- Recent Searches Bar -->
+<div id="recent-searches" class="recent-searches hidden">
+    <span class="recent-label">Recent:</span>
+    <div id="recent-tags" class="recent-tags"></div>
+</div>
+
+<!-- Alert / Error Banner -->
+<div id="error-banner" class="alert-banner hidden">
+    <i data-feather="alert-circle" class="alert-icon"></i>
+    <span id="error-message">Unable to fetch weather information.</span>
+</div>
+
+<!-- Loading State Overlay -->
+<div id="loading-spinner" class="loading-state hidden">
+    <div class="spinner"></div>
+    <p>Fetching forecast metrics...</p>
+</div>
+
+<!-- Weather Information Container -->
+<div id="weather-dashboard" class="dashboard-grid">
+    
+    <!-- Hero / Current Weather View -->
+    <section class="card current-weather-card">
+        <div class="card-header">
+            <div>
+                <h1 id="city-name" class="city-name">Loading...</h1>
+                <p id="country-name" class="country-name">--</p>
+            </div>
+            <div class="live-badge">
+                <span class="pulse-dot"></span> LIVE
+            </div>
+        </div>
+
+        <div class="current-weather-body">
+            <div class="temp-display">
+                <span id="current-temp" class="temp-value">--</span>
+                <span class="temp-unit">°C</span>
+            </div>
+            
+            <div class="condition-display">
+                <div id="weather-icon-container" class="weather-icon-lg">
+                    <i data-feather="sun"></i>
+                </div>
+                <span id="weather-condition" class="condition-text">Clear sky</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Grid -->
+    <section class="metrics-grid">
+        <div class="card metric-card">
+            <div class="metric-icon"><i data-feather="thermometer"></i></div>
+            <div class="metric-info">
+                <span class="metric-label">Feels Like</span>
+                <span id="feels-like" class="metric-value">--°C</span>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-icon"><i data-feather="droplet"></i></div>
+            <div class="metric-info">
+                <span class="metric-label">Humidity</span>
+                <span id="humidity" class="metric-value">--%</span>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-icon"><i data-feather="wind"></i></div>
+            <div class="metric-info">
+                <span class="metric-label">Wind Speed</span>
+                <span id="wind-speed" class="metric-value">-- km/h</span>
+            </div>
+        </div>
+
+        <div class="card metric-card">
+            <div class="metric-icon"><i data-feather="compass"></i></div>
+            <div class="metric-info">
+                <span class="metric-label">Pressure</span>
+                <span id="pressure" class="metric-value">-- hPa</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 24-Hour Hourly Forecast Section -->
+    <section class="card hourly-forecast-card">
+        <h2 class="section-title"><i data-feather="clock"></i> 24-Hour Forecast</h2>
+        <div id="hourly-container" class="hourly-slider">
+            <!-- Dynamic Hourly Items injected via JavaScript -->
+        </div>
+    </section>
+
+    <!-- 7-Day Daily Forecast Section -->
+    <section class="card daily-forecast-card">
+        <h2 class="section-title"><i data-feather="calendar"></i> 7-Day Outlook</h2>
+        <div id="daily-container" class="daily-list">
+            <!-- Dynamic Daily Rows injected via JavaScript -->
+        </div>
+    </section>
+
+</div>
+{% endblock %}

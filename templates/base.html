@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Nimbus — Modern Weather Dashboard{% endblock %}</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for Clean UI Elements -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="theme-default">
+    <div class="app-container">
+        <!-- Navigation Header -->
+        <header class="navbar">
+            <div class="brand">
+                <i data-feather="cloud-lightning" class="brand-icon"></i>
+                <span class="brand-name">Nimbus</span>
+            </div>
+            
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <div class="input-wrapper">
+                        <i data-feather="search" class="search-icon"></i>
+                        <input type="text" id="city-input" placeholder="Search city (e.g. London, Tokyo, New York)..." autocomplete="off" required>
+                    </div>
+                    <button type="submit" class="btn-primary" aria-label="Search city">Search</button>
+                    <button type="button" id="geo-btn" class="btn-icon" title="Use current location" aria-label="Use current location">
+                        <i data-feather="map-pin"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="unit-toggle-container">
+                <button id="unit-celsius" class="unit-btn active" data-unit="C">°C</button>
+                <span class="unit-divider">|</span>
+                <button id="unit-fahrenheit" class="unit-btn" data-unit="F">°F</button>
+            </div>
+        </header>
+
+        <!-- Main Dashboard View -->
+        <main class="dashboard-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Nimbus Weather Application • Powered by Open-Meteo API</p>
+        </footer>
+    </div>
+
+    <!-- Main Client-Side JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
