@@ -1,19 +1,14 @@
 # Nimbus — Weather Forecast Application
 
-<p align="center">
-  A modern, responsive weather dashboard built with Python and Flask.
-  <br />
-  Get real-time weather conditions, hourly updates, and upcoming forecasts through a clean and interactive interface.
-</p>
+A modern, responsive weather dashboard built with Python and Flask.  
+Get real-time weather conditions, hourly updates, and upcoming forecasts through a clean and interactive interface.
 
-<p align="center">
-  ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-  ![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-  ![Open-Meteo](https://img.shields.io/badge/Weather_API-Open--Meteo-38BDF8?style=for-the-badge)
-  ![Nimbus Weather Dashboard Preview](static/images/dashboard-preview.png)
-</p>
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Open-Meteo](https://img.shields.io/badge/Weather_API-Open--Meteo-38BDF8?style=for-the-badge)
 
+![Nimbus Weather Dashboard Preview](static/images/dashboard-preview.png)
 ---
 
 ## Overview
